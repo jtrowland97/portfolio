@@ -56,9 +56,9 @@
         <ul class="list-none m-0 p-0 flex flex-wrap gap-x-7 gap-y-1">
           <!-- On each page, add aria-current="page" and border-ink dark:border-ink-dark to its own link
                (replace border-transparent) so visitors can see where they are. -->
-          <li><a href="index.html#about" class="inline-block py-1.5 font-medium no-underline border-b-2 border-transparent hover:border-accent dark:hover:border-accent-dark">About</a></li>
-          <li><a href="index.html#work" class="inline-block py-1.5 font-medium no-underline border-b-2 border-transparent hover:border-accent dark:hover:border-accent-dark">Portfolio</a></li>
-          <li><a href="resume.html" class="inline-block py-1.5 font-medium no-underline border-b-2 border-transparent hover:border-accent dark:hover:border-accent-dark">Resume</a></li>
+          <li><a href="about.html" class="inline-block py-1.5 font-medium no-underline border-b-2 border-transparent hover:border-accent dark:hover:border-accent-dark">About</a></li>
+          <li><a href="portfolio.html" class="inline-block py-1.5 font-medium no-underline border-b-2 border-transparent hover:border-accent dark:hover:border-accent-dark">Portfolio</a></li>
+          <li><a href="resume.html" class="inline-block py-1.5 font-medium no-underline border-b-2 border-ink dark:border-ink-dark hover:border-accent dark:hover:border-accent-dark"">Resume</a></li>
           <li><a href="contact.html" class="inline-block py-1.5 font-medium no-underline border-b-2 border-transparent hover:border-accent dark:hover:border-accent-dark">Contact</a></li>
         </ul>
       </nav>
@@ -67,43 +67,167 @@
   </header>
 
   <!-- ================= Content ================= -->
-  <main>
+   <main>
     <div class="max-w-[68rem] mx-auto px-6">
 
-      <article aria-labelledby="page-heading"
-        class="mt-12 mb-20 rounded-md bg-panel dark:bg-panel-dark p-[clamp(1.75rem,5vw,3.5rem)] min-h-[20rem]">
+      <div class="mt-12 mb-20 rounded-md bg-panel dark:bg-panel-dark p-[clamp(1.75rem,5vw,3.5rem)]">
 
-        <h1 id="page-heading"
-          class="m-0 mb-6 font-serif font-semibold text-[clamp(2rem,4.6vw,3.25rem)] leading-[1.12] tracking-tight">
-          Page title
+        <h1 class="m-0 mb-10 font-serif font-semibold text-[clamp(2rem,4.6vw,3.25rem)] leading-[1.12] tracking-tight">
+          Resume
         </h1>
 
-        <!-- Keep line length comfortable for reading -->
-        <div class="max-w-[65ch]">
-          <p class="m-0 mb-4 text-muted dark:text-muted-dark">
-            Introductory paragraph. Use this space to set up what the page covers and why it matters to the reader.
-          </p>
+        <div class="grid gap-12">
 
-          <h2 class="mt-10 mb-3 font-serif font-semibold text-[clamp(1.5rem,3vw,2rem)] leading-tight">Section heading</h2>
-          <p class="m-0 mb-4 text-muted dark:text-muted-dark">
-            Body copy goes here. Replace this placeholder with your own content, such as a project write-up, a case study, or a longer bio.
-          </p>
+          <!-- ================= Education ================= -->
+          <section aria-labelledby="education-heading" class="grid grid-cols-1 sm:grid-cols-[11rem_minmax(0,1fr)] gap-x-8 gap-y-4 pt-6 border-t-2 border-ink dark:border-ink-dark">
+            <h2 id="education-heading" class="m-0 font-serif font-semibold text-[1.5rem] leading-tight">Education</h2>
+            <div class="max-w-[65ch] grid gap-4">
+              <p class="m-0">
+                <strong class="block font-semibold">The University of Texas at Austin</strong>
+                <span class="text-muted dark:text-muted-dark">B.A., English and American Studies</span>
+              </p>
+              <p class="m-0">
+                <strong class="block font-semibold">Texas State University</strong>
+                <span class="text-muted dark:text-muted-dark">M.A., Technical Communication in progress</span>
+              </p>
+            </div>
+          </section>
 
-          <ul class="m-0 mb-4 pl-5 list-disc marker:text-accent dark:marker:text-accent-dark text-muted dark:text-muted-dark space-y-1">
-            <li>A list item for a key point or deliverable</li>
-            <li>Another list item</li>
-            <li>A third list item</li>
-          </ul>
+          <!-- ================= Experience ================= -->
+          <section aria-labelledby="experience-heading" class="grid grid-cols-1 sm:grid-cols-[11rem_minmax(0,1fr)] gap-x-8 gap-y-4 pt-6 border-t-2 border-ink dark:border-ink-dark">
+            <h2 id="experience-heading" class="m-0 font-serif font-semibold text-[1.5rem] leading-tight">Experience</h2>
+            <div class="max-w-[65ch] grid gap-10">
+          <article>
+            <div class="flex flex-wrap items-baseline justify-between gap-x-4 gap-y-0.5 mb-4">
+              <h3 class="m-0 font-serif text-[1.3125rem] font-semibold leading-snug">University of Texas at Austin High School, Austin, TX</h3>
+              <p class="m-0 text-[0.9375rem] text-muted dark:text-muted-dark">January 2020 &ndash; present</p>
+            </div>
+            <div class="grid gap-6 pl-4 border-l-2 border-rule dark:border-rule-dark">
+            <div>
+              <div class="flex flex-wrap items-baseline justify-between gap-x-4 gap-y-0.5 mb-2">
+              <h4 class="m-0 text-[1.0625rem] font-semibold leading-snug">Senior Student Support Specialist</h4>
+              <p class="m-0 text-[0.9375rem] text-muted dark:text-muted-dark">May 2026 &ndash; present</p>
+              </div>
+              <ul class="list-disc pl-5 m-0 grid gap-1.5 marker:text-accent dark:marker:text-accent-dark">
+              <li>Lead and coordinate Edservices team of Student Support Specialists.</li>
+              <li>Collaborate with administration to develop communications and help strategies for UTHS programs.</li>
+              <li>Develop training documentation for Student Support Specialists, including FAQS and process documentation.</li>
+              </ul>
+            </div>
+            <div>
+              <div class="flex flex-wrap items-baseline justify-between gap-x-4 gap-y-0.5 mb-2">
+              <h4 class="m-0 text-[1.0625rem] font-semibold leading-snug">Student Services Specialist</h4>
+              <p class="m-0 text-[0.9375rem] text-muted dark:text-muted-dark">June 2021 &ndash; May 2026</p>
+              </div>
+              <ul class="list-disc pl-5 m-0 grid gap-1.5 marker:text-accent dark:marker:text-accent-dark">
+              <li>Process payment forms and paperwork for course extensions, enrollments, exams, and exam inquiries.</li>
+              <li>Troubleshoot Canvas, Proctorio, and Skyward instructional technology systems for students and parents.</li>
+              <li>Manage shared email inbox and communicate school policies to current and prospective students.</li>
+              </ul>
+            </div>
+            <div>
+              <div class="flex flex-wrap items-baseline justify-between gap-x-4 gap-y-0.5 mb-2">
+              <h4 class="m-0 text-[1.0625rem] font-semibold leading-snug">Administrative Associate</h4>
+              <p class="m-0 text-[0.9375rem] text-muted dark:text-muted-dark">February 2020 &ndash; June 2021</p>
+              </div>
+              <ul class="list-disc pl-5 m-0 grid gap-1.5 marker:text-accent dark:marker:text-accent-dark">
+              <li>Process payment forms and paperwork for course extensions, exams, and exam inquiries.</li>
+              <li>Coordinate scheduling of office conference rooms.</li>
+              <li>Receive and process incoming checks.</li>
+              <li>Answer main phone line for program.</li>
+              </ul>
+            </div>
+            <div>
+              <div class="flex flex-wrap items-baseline justify-between gap-x-4 gap-y-0.5 mb-2">
+              <h4 class="m-0 text-[1.0625rem] font-semibold leading-snug">Temporary Administrative Associate</h4>
+              <p class="m-0 text-[0.9375rem] text-muted dark:text-muted-dark">January 2020 &ndash; February 2020</p>
+              </div>
+              <ul class="list-disc pl-5 m-0 grid gap-1.5 marker:text-accent dark:marker:text-accent-dark">
+              <li>Process registration paperwork for UTHS diploma program enrollments.</li>
+              <li>Manage and update student data based on needs of administration.</li>
+              <li>Process payments for UTHS independent study program.</li>
+              </ul>
+            </div>
+            </div>
+          </article>
+          <article>
+            <div class="flex flex-wrap items-baseline justify-between gap-x-4 gap-y-0.5 mb-4">
+              <h3 class="m-0 font-serif text-[1.3125rem] font-semibold leading-snug">UT Division of Diversity and Community Engagement, Austin, TX</h3>
+              <p class="m-0 text-[0.9375rem] text-muted dark:text-muted-dark">July 2019 &ndash; November 2019</p>
+            </div>
+            <div class="grid gap-6 pl-4 border-l-2 border-rule dark:border-rule-dark">
+            <div>
+              <div class="flex flex-wrap items-baseline justify-between gap-x-4 gap-y-0.5 mb-2">
+              <h4 class="m-0 text-[1.0625rem] font-semibold leading-snug">High School College Advisor</h4>
+              </div>
+              <ul class="list-disc pl-5 m-0 grid gap-1.5 marker:text-accent dark:marker:text-accent-dark">
+              <li>Meet with high school students at Hutto HS individually to discuss post-graduation plans including higher education, workforce, and military plans.</li>
+              <li>Track student data and make reports based on data milestones.</li>
+              </ul>
+            </div>
+            </div>
+          </article>
+          <article>
+            <div class="flex flex-wrap items-baseline justify-between gap-x-4 gap-y-0.5 mb-4">
+              <h3 class="m-0 font-serif text-[1.3125rem] font-semibold leading-snug">Liberal Arts Instructional Technology Services (LAITS), Austin, TX</h3>
+              <p class="m-0 text-[0.9375rem] text-muted dark:text-muted-dark">August 2017 &ndash; July 2019</p>
+            </div>
+            <div class="grid gap-6 pl-4 border-l-2 border-rule dark:border-rule-dark">
+            <div>
+              <div class="flex flex-wrap items-baseline justify-between gap-x-4 gap-y-0.5 mb-2">
+              <h4 class="m-0 text-[1.0625rem] font-semibold leading-snug">Student Technician</h4>
+              </div>
+              <ul class="list-disc pl-5 m-0 grid gap-1.5 marker:text-accent dark:marker:text-accent-dark">
+              <li>Receive customer calls about issues with classroom or desktop technology, submit tickets relating to any issues, and respond to issues.</li>
+              <li>Survey classroom technology by checking for any issues with any technology such as Windows OS, Mac OS, projectors, and microphones.</li>
+              </ul>
+            </div>
+            </div>
+          </article>
+            </div>
+          </section>
 
-          <p class="m-0 text-muted dark:text-muted-dark">
-            Need to go back? <a href="index.html" class="font-medium text-accent dark:text-accent-dark">Return to the home page</a>.
-          </p>
+          <!-- ================= Leadership ================= -->
+          <section aria-labelledby="leadership-heading" class="grid grid-cols-1 sm:grid-cols-[11rem_minmax(0,1fr)] gap-x-8 gap-y-4 pt-6 border-t-2 border-ink dark:border-ink-dark">
+            <h2 id="leadership-heading" class="m-0 font-serif font-semibold text-[1.5rem] leading-tight">Leadership</h2>
+            <div class="max-w-[65ch] grid gap-10">
+          <article>
+            <div class="flex flex-wrap items-baseline justify-between gap-x-4 gap-y-0.5 mb-4">
+              <h3 class="m-0 font-serif text-[1.3125rem] font-semibold leading-snug">Campus Events + Entertainment &ndash; UT Austin</h3>
+              <p class="m-0 text-[0.9375rem] text-muted dark:text-muted-dark">August 2016 &ndash; May 2019</p>
+            </div>
+            <div class="grid gap-6 pl-4 border-l-2 border-rule dark:border-rule-dark">
+            <div>
+              <div class="flex flex-wrap items-baseline justify-between gap-x-4 gap-y-0.5 mb-2">
+              <h4 class="m-0 text-[1.0625rem] font-semibold leading-snug">Creative Arts + Theatre Chair</h4>
+              <p class="m-0 text-[0.9375rem] text-muted dark:text-muted-dark">April 2018 &ndash; April 2019</p>
+              </div>
+              <ul class="list-disc pl-5 m-0 grid gap-1.5 marker:text-accent dark:marker:text-accent-dark">
+              <li>Headed committee operations, including confirming room bookings, reservations, and the management of committee events, including the Annual Madrigal Dinner.</li>
+              <li>Coordinated officer team, which included coordination of Public Relations, Membership, Budgeting and Media Development teams.</li>
+              <li>Lead weekly meetings of committee, sharing important information and recruiting new members.</li>
+              <li>Assist event producers with the planning of events and coordinate with committee advisor.</li>
+              </ul>
+            </div>
+            </div>
+          </article>
+            </div>
+          </section>
+
+          <!-- ================= Skills ================= -->
+          <section aria-labelledby="skills-heading" class="grid grid-cols-1 sm:grid-cols-[11rem_minmax(0,1fr)] gap-x-8 gap-y-4 pt-6 border-t-2 border-ink dark:border-ink-dark">
+            <h2 id="skills-heading" class="m-0 font-serif font-semibold text-[1.5rem] leading-tight">Skills</h2>
+            <div class="max-w-[65ch]">
+              <p class="m-0"><strong class="font-semibold">Computer:</strong> Microsoft Office Suite, Adobe InDesign, Adobe Photoshop</p>
+            </div>
+          </section>
+
         </div>
-
-      </article>
+      </div>
 
     </div>
   </main>
+
 
 </body>
 </html>
