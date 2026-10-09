@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth motion-reduce:scroll-auto scroll-pt-[env(safe-area-inset-top,0px)]">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Page title | James Rowland, Technical Communicator</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,500;8..60,600&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+
+<!-- Tailwind Play CDN (fine for prototyping; use the Tailwind CLI/build step for production) -->
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+  /* Keep this config identical to index.html so both pages share one look */
+  tailwind.config = {
+    darkMode: 'media',
+    theme: {
+      extend: {
+        fontFamily: {
+          serif: ['"Source Serif 4"', 'Georgia', '"Times New Roman"', 'serif'],
+          sans: ['"IBM Plex Sans"', 'system-ui', '-apple-system', '"Segoe UI"', 'Arial', 'sans-serif'],
+        },
+        colors: {
+          page:    { DEFAULT: '#f4f6f8', dark: '#10161f' },
+          panel:   { DEFAULT: '#e4ebf1', dark: '#1a2433' },
+          ink:     { DEFAULT: '#172033', dark: '#e8edf3' },
+          muted:   { DEFAULT: '#4d5a6e', dark: '#a2afc0' },
+          rule:    { DEFAULT: '#b9c5d2', dark: '#34425a' },
+          accent:  { DEFAULT: '#0d5f86', dark: '#6cc0e8' },
+          onaccent:{ DEFAULT: '#ffffff', dark: '#0b1420' },
+          mark:    { DEFAULT: '#ffe27a', dark: '#5b4d12' },
+          avatarbg:{ DEFAULT: '#c9d5e0', dark: '#2b394f' },
+          avatarfg:{ DEFAULT: '#f4f6f8', dark: '#10161f' },
+        },
+      },
+    },
+  };
+</script>
+
+
+</head>
+
+<body class="m-0 bg-page dark:bg-page-dark text-ink dark:text-ink-dark font-sans text-[1.0625rem] leading-relaxed pt-[env(safe-area-inset-top,0px)] pb-[env(safe-area-inset-bottom,0px)]">
+
+  <!-- ================= Header (same as index.html) ================= -->
+  <header class="border-b border-rule dark:border-rule-dark">
+    <div class="max-w-[68rem] mx-auto px-6 py-5 flex flex-wrap items-center justify-between gap-x-8 gap-y-3">
+
+      <a href="index.html" class="no-underline leading-tight">
+        <strong class="block font-serif text-[1.375rem] font-semibold">James Rowland</strong>
+        <span class="text-[0.9375rem] text-muted dark:text-muted-dark">Technical communicator</span>
+      </a>
+
+      <nav aria-label="Main">
+        <ul class="list-none m-0 p-0 flex flex-wrap gap-x-7 gap-y-1">
+          <!-- On each page, add aria-current="page" and border-ink dark:border-ink-dark to its own link
+               (replace border-transparent) so visitors can see where they are. -->
+          <li><a href="index.html#about" class="inline-block py-1.5 font-medium no-underline border-b-2 border-transparent hover:border-accent dark:hover:border-accent-dark">About</a></li>
+          <li><a href="index.html#work" class="inline-block py-1.5 font-medium no-underline border-b-2 border-transparent hover:border-accent dark:hover:border-accent-dark">Portfolio</a></li>
+          <li><a href="resume.html" class="inline-block py-1.5 font-medium no-underline border-b-2 border-transparent hover:border-accent dark:hover:border-accent-dark">Resume</a></li>
+          <li><a href="contact.html" class="inline-block py-1.5 font-medium no-underline border-b-2 border-transparent hover:border-accent dark:hover:border-accent-dark">Contact</a></li>
+        </ul>
+      </nav>
+
+    </div>
+  </header>
+
+  <!-- ================= Content ================= -->
+  <main>
+    <div class="max-w-[68rem] mx-auto px-6">
+
+      <article aria-labelledby="page-heading"
+        class="mt-12 mb-20 rounded-md bg-panel dark:bg-panel-dark p-[clamp(1.75rem,5vw,3.5rem)] min-h-[20rem]">
+
+        <h1 id="page-heading"
+          class="m-0 mb-6 font-serif font-semibold text-[clamp(2rem,4.6vw,3.25rem)] leading-[1.12] tracking-tight">
+          Page title
+        </h1>
+
+        <!-- Keep line length comfortable for reading -->
+        <div class="max-w-[65ch]">
+          <p class="m-0 mb-4 text-muted dark:text-muted-dark">
+            Introductory paragraph. Use this space to set up what the page covers and why it matters to the reader.
+          </p>
+
+          <h2 class="mt-10 mb-3 font-serif font-semibold text-[clamp(1.5rem,3vw,2rem)] leading-tight">Section heading</h2>
+          <p class="m-0 mb-4 text-muted dark:text-muted-dark">
+            Body copy goes here. Replace this placeholder with your own content, such as a project write-up, a case study, or a longer bio.
+          </p>
+
+          <ul class="m-0 mb-4 pl-5 list-disc marker:text-accent dark:marker:text-accent-dark text-muted dark:text-muted-dark space-y-1">
+            <li>A list item for a key point or deliverable</li>
+            <li>Another list item</li>
+            <li>A third list item</li>
+          </ul>
+
+          <p class="m-0 text-muted dark:text-muted-dark">
+            Need to go back? <a href="index.html" class="font-medium text-accent dark:text-accent-dark">Return to the home page</a>.
+          </p>
+        </div>
+
+      </article>
+
+    </div>
+  </main>
+
+</body>
+</html>
